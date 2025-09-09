@@ -70,9 +70,28 @@
     </section>
 
     <!--Body Section-->
+    <main class="api-part max-w-11/12 mx-auto bg-[#F0FDF4] h-full">
+        <h1 class="text-center mt-24 mb-10 font-semibold text-[32px]">Choose Your Trees</h1>
+    <div id="spinner" class=" hidden absolute inset-0 flex justify-center items-center bg-white/50 z-20">
+        <div class="spinner-circle"></div>
+    </div>
+    <div class="grid md:grid-cols-5 grid-cols-1 text-center md:text-left md:gap-[20px] ">
+        <section class="" id="allCategory"><h1>Categories</h1></section>
+        <section class="col-span-3 ml-1" id="card_section"></section>
+        <section id="your_cart" class="bg-white px-4 py-3 ">
+          <h2 class="text-lg font-bold mb-2">Your Cart</h2>
+          <div id="cart_items" class="space-y-2"></div>
+          <!-- <hr class="my-2" /> -->
+          <div class="flex justify-end font-bold hidden" id="cart_total_row">
+            <span>Total:</span>
+            <span id="cart_total">৳0</span>
+          </div>
+        </section>
+    </div>
+    </main>
 
     <!-- Bottom Section -->
-    <section class="bottom-section">
+    <section class="bottom-section mt-[100px]">
         <section class="about-campaign">
             <div class=" w-3/5 col-span-6 mx-auto ">
                 <h1 class="font-semibold text-[32px] text-center mt-5 md:mt-0">About the Campaign</h1>
@@ -141,6 +160,12 @@
             <h1 class="font-normal text-base text-white text-center">© 2025 Green Earth. All Rights Reserved.</h1>
         </div>
     </footer>
+    
+    <!-- Popup Message -->
+    <div id="popupMessage" class="fixed bottom-5 right-5 bg-gray-900 text-white px-5 py-3 rounded-lg shadow-lg flex items-center justify-between space-x-4 hidden z-50">
+    <span id="popupText">Item has been added to the cart..</span>
+    <button id="popupOkBtn" class="bg-blue-300 text-black px-3 py-1 rounded-full">OK</button>
+    </div>
 
     <!--Script Calling-->
     <script src="scripts/script.js"></script>
