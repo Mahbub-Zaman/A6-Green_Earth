@@ -1,4 +1,4 @@
-# All answers
+# ✅ All answers
 
 ## 1) Difference between var, let, and const
 - **var:** function-scoped, redeclare এবং reassign করা যায়, hoisting হয়।  
@@ -68,3 +68,8 @@ const msg = `Hello, my name is ${name} and I am ${age} years old.`;
 
 * Advantages: readable, clean syntax, multi-line support.
 ---
+
+# 🔰 Live Link
+## Github Live Link: https://mahbub-zaman.github.io/A6-Green_Earth/
+
+## Netify Link https://mahbub-zaman-green-earth.netlify.app/
