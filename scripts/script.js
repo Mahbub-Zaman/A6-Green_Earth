@@ -49,20 +49,21 @@ function cardSections(plants, card_section) {
   const plantsHTML = plants
   ?.map(
     (plant) => `
-   <div class="bg-white rounded-md p-4 shadow">
-     <img src="${plant.image}" class="h-40 w-full rounded-md object-cover"/>
-     <h1 id="modal" data-plantid="${plant.id}" class="text-left font-semibold plant-card cursor-pointer pt-2">${plant.name}</h1>
-     <p class="text-left text-sm text-gray-600 pt-2">${plant.description.slice(0, 80)}...</p>
+      <div class="bg-white rounded-md p-4 shadow flex flex-col h-full">
+     <img src="${plant.image}" class="h-40 w-full rounded-md object-cover mb-3"/>
+     <h1 id="modal" data-plantid="${plant.id}" class="text-left font-semibold plant-card cursor-pointer">${plant.name}</h1>
+     <p class="text-left text-sm text-gray-600 flex-grow mt-2">${plant.description.slice(0, 80)}...</p>
 
-     <div class="flex justify-between items-center mt-3">
+     <div class="flex justify-between items-center mt-3 mb-2">
        <button class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">${plant.category}</button>
        <p class="font-bold">৳${plant.price}</p>
      </div>
 
-     <button class="button_cart w-full bg-[#15803D] mt-4 rounded-full py-2 px-2 text-white text-3 font-medium ">
+     <button class="button_cart w-full bg-[#15803D] mt-auto rounded-full py-2 px-2 text-white text-sm font-medium hover:bg-[#166534] transition">
        Add to cart
      </button>
    </div>
+
   `
   )
   .join("");
